@@ -1,10 +1,15 @@
 # kobo-to-readwise
 
-A Clojure library designed to ... well, that part is up to you.
+This tiny application takes highlights from a kobo sqlite database and sends them to Readwise.  I'm trying to get back to a smooth flow of highlighting and sending things off to Readwise that I had when I was using a Kindle.
 
 ## Usage
 
-FIXME
+1. Get your [Readwise API Key](https://readwise.io/api_deets).
+2. Past it into `~/.readwise_api`
+3. Make sure you've opened the Kobo app on your mac recently, this will pull down your Kobo database including all of your annotations.
+4. Run `(-main)`.  
+
+After this all of your highlights and annotations should be in Readwise. Run it again to pick up new highlights. Currently the script gets and sends all of your highlights everytime you run it because I'm relying on Readwise's API contract to dedup highlights by title, author, and highlight text.
 
 ## License
 
